@@ -3,17 +3,13 @@ import java.util.Scanner;
 public class q2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        double salary = sc.nextDouble();
-        int yearsOfService = sc.nextInt();
-        double bonus;
+        int year = sc.nextInt();
 
-        if (yearsOfService > 5) {
-            bonus = salary * 0.05;
+        if (year >= 1582 && (year % 400 == 0 || (year % 4 == 0 && year % 100 != 0))) {
+            System.out.println(year + " is a Leap Year.");
         } else {
-            bonus = 0;
+            System.out.println(year + " is not a Leap Year.");
         }
-
-        System.out.println("Bonus amount: " + bonus);
 
         sc.close();
     }

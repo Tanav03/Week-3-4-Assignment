@@ -4,23 +4,19 @@ public class q5 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
+        int originalNumber = number;
+        int sum = 0;
 
-        if (number <= 0) {
-            System.out.println("The number is not a positive integer.");
+        while (originalNumber != 0) {
+            int digit = originalNumber % 10;
+            sum = sum + (digit * digit * digit);
+            originalNumber = originalNumber / 10;
+        }
+
+        if (sum == number) {
+            System.out.println(number + " is an Armstrong number.");
         } else {
-            int i = 1;
-            while (i <= number) {
-                if (i % 3 == 0 && i % 5 == 0) {
-                    System.out.println("FizzBuzz");
-                } else if (i % 3 == 0) {
-                    System.out.println("Fizz");
-                } else if (i % 5 == 0) {
-                    System.out.println("Buzz");
-                } else {
-                    System.out.println(i);
-                }
-                i++;
-            }
+            System.out.println(number + " is not an Armstrong number.");
         }
 
         sc.close();
