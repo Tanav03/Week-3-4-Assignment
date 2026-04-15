@@ -5,10 +5,16 @@ public class q1 {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
 
-        if (number % 5 == 0) {
-            System.out.println("Is the number " + number + " divisible by 5? Yes");
+        if (number <= 0) {
+            System.out.println("The number is not a natural number.");
         } else {
-            System.out.println("Is the number " + number + " divisible by 5? No");
+            for (int i = 1; i <= number; i++) {
+                if (i % 2 == 0) {
+                    System.out.println(i + " is even");
+                } else {
+                    System.out.println(i + " is odd");
+                }
+            }
         }
 
         sc.close();

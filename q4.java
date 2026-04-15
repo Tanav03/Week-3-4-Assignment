@@ -5,11 +5,20 @@ public class q4 {
         Scanner sc = new Scanner(System.in);
         int number = sc.nextInt();
 
-        if (number > 0) {
-            int sum = number * (number + 1) / 2;
-            System.out.println("The sum of " + number + " natural numbers is " + sum);
+        if (number <= 0) {
+            System.out.println("The number is not a positive integer.");
         } else {
-            System.out.println("The number " + number + " is not a natural number");
+            for (int i = 1; i <= number; i++) {
+                if (i % 3 == 0 && i % 5 == 0) {
+                    System.out.println("FizzBuzz");
+                } else if (i % 3 == 0) {
+                    System.out.println("Fizz");
+                } else if (i % 5 == 0) {
+                    System.out.println("Buzz");
+                } else {
+                    System.out.println(i);
+                }
+            }
         }
 
         sc.close();

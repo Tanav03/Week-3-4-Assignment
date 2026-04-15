@@ -3,15 +3,17 @@ import java.util.Scanner;
 public class q2 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int number1 = sc.nextInt();
-        int number2 = sc.nextInt();
-        int number3 = sc.nextInt();
+        double salary = sc.nextDouble();
+        int yearsOfService = sc.nextInt();
+        double bonus;
 
-        if (number1 < number2 && number1 < number3) {
-            System.out.println("Is the first number the smallest? Yes");
+        if (yearsOfService > 5) {
+            bonus = salary * 0.05;
         } else {
-            System.out.println("Is the first number the smallest? No");
+            bonus = 0;
         }
+
+        System.out.println("Bonus amount: " + bonus);
 
         sc.close();
     }
